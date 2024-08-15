@@ -16,13 +16,13 @@ public interface CodexParser<T> {
      * @param t
      * @return
      */
-    public byte[] encode(byte[] bytes, T t, CodexEnum type);
+    public byte[] encode(T t);
 
     /**
      * 将byte数组解码为字段数据
      * @param bytes
      * @return
      */
-    public T decode(byte[] bytes, CodexEnum type);
+    public T decode(byte[] bytes);
 
 }

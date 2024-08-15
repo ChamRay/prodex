@@ -14,12 +14,12 @@ public class BinByteParser implements CodexParser<Byte> {
     }
 
     @Override
-    public byte[] encode(byte[] bytes, Byte aByte, CodexEnum type) {
+    public byte[] encode(Byte aByte) {
         return new byte[0];
     }
 
     @Override
-    public Byte decode(byte[] bytes, CodexEnum type) {
+    public Byte decode(byte[] bytes) {
         return 0;
     }
 }

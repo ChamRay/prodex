@@ -20,7 +20,7 @@ public class CodexFactory {
 
     // 获取Coding接口的所有子类，反射获取子实现类，并封装到codexMap中
     static {
-        // todo 需要获取任意包路径下的子类
+        // todo 替换成可配置路径
         Reflections reflections = new Reflections("com.ray");
         Set<Class<? extends CodexParser>> subTypesOf = reflections.getSubTypesOf(CodexParser.class);
         codexMap = subTypesOf.stream().map(clazz -> {
@@ -33,8 +33,8 @@ public class CodexFactory {
     }
 
 
-    public static CodexParser<?> getInstance(CodexEnum codexEnum) {
-        return codexMap.get(codexEnum);
+    public static <E extends CodexParser> E getInstance(CodexEnum codexEnum) {
+        return (E)codexMap.get(codexEnum);
     }
 
 

@@ -14,12 +14,12 @@ public class BinIntParser implements CodexParser<Integer> {
     }
 
     @Override
-    public byte[] encode(byte[] bytes, Integer integer, CodexEnum type) {
+    public byte[] encode(Integer integer) {
         return new byte[0];
     }
 
     @Override
-    public Integer decode(byte[] bytes, CodexEnum type) {
+    public Integer decode(byte[] bytes) {
         return 0;
     }
 }

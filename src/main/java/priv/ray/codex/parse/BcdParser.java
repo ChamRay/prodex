@@ -14,12 +14,12 @@ public class BcdParser implements CodexParser<String> {
     }
 
     @Override
-    public byte[] encode(byte[] bytes, String o, CodexEnum type) {
+    public byte[] encode(String o) {
         return new byte[0];
     }
 
     @Override
-    public String decode(byte[] bytes, CodexEnum type) {
+    public String decode(byte[] bytes) {
         return null;
     }
 }

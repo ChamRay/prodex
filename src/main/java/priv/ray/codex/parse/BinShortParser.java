@@ -9,18 +9,22 @@ import priv.ray.codex.enums.CodexEnum;
  */
 
 public class BinShortParser implements CodexParser<Short> {
+
+
+    int size = Short.BYTES;
+
     @Override
     public CodexEnum getCodexType() {
         return CodexEnum.SHORT;
     }
 
     @Override
-    public byte[] encode(byte[] bytes, Short aShort, CodexEnum type) {
-        return new byte[0];
+    public byte[] encode(Short aShort) {
+        return new byte[size];
     }
 
     @Override
-    public Short decode(byte[] bytes, CodexEnum type) {
+    public Short decode(byte[] bytes) {
         return 0;
     }
 }
