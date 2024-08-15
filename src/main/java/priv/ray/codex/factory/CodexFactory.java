@@ -1,12 +1,11 @@
-package com.ray.codex.factory;
+package priv.ray.codex.factory;
 
-import com.ray.codex.coding.Coding;
-import com.ray.codex.enums.CodexEnum;
+import priv.ray.codex.coding.Coding;
+import priv.ray.codex.enums.CodexEnum;
 import org.reflections.Reflections;
 
 import java.util.Map;
 import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
 /**

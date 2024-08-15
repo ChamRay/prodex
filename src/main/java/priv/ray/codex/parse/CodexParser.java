@@ -1,6 +1,6 @@
-package com.ray.codex.parse;
+package priv.ray.codex.parse;
 
-import com.ray.codex.enums.CodexEnum;
+import priv.ray.codex.enums.CodexEnum;
 
 /**
  * @author Ray
@@ -15,17 +15,13 @@ public interface CodexParser<T> {
      * @param t
      * @return
      */
-    default public byte[] encode(byte[] bytes, T t, CodexEnum type){
-        return null;
-    }
+    public byte[] encode(byte[] bytes, T t, CodexEnum type);
 
     /**
      * 将byte数组解码为字段数据
      * @param bytes
      * @return
      */
-    default public T decode(byte[] bytes, CodexEnum type){
-        return null;
-    }
+    public T decode(byte[] bytes, CodexEnum type);
 
 }

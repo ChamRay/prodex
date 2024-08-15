@@ -1,8 +1,6 @@
-package com.ray.codex;
+package priv.ray.codex;
 
-
-import com.ray.codex.enums.CodexEnum;
-import com.ray.codex.parse.DefaultParser;
+import priv.ray.codex.parse.CodexParser;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -31,13 +29,8 @@ public @interface Codex {
      * 解析器要是 org.jeecg.codex.CodexParser 的子实现类
      * @return
      */
-    Class<? extends DefaultParser> codexParser() default DefaultParser.class;
+    Class<? extends CodexParser> codexParser() ;
 
-    /**
-     * 编解码规则
-     * @return
-     */
-    CodexEnum type() default CodexEnum.INT;
 
 
     /**

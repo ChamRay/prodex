@@ -1,4 +1,4 @@
-package com.ray.codex.enums;
+package priv.ray.codex.enums;
 
 /**
  * @author Ray
