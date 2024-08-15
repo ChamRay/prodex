@@ -10,6 +10,7 @@ import priv.ray.codex.enums.CodexEnum;
 public interface CodexParser<T> {
 
 
+    CodexEnum getCodexType();
     /**
      * 将字段数据编码为byte数组
      * @param t

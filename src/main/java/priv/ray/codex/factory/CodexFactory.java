@@ -1,8 +1,8 @@
 package priv.ray.codex.factory;
 
-import priv.ray.codex.coding.Coding;
 import priv.ray.codex.enums.CodexEnum;
 import org.reflections.Reflections;
+import priv.ray.codex.parse.CodexParser;
 
 import java.util.Map;
 import java.util.Set;
@@ -16,23 +16,24 @@ import java.util.stream.Collectors;
 public class CodexFactory {
 
 
-    private static Map<CodexEnum, ? extends Coding> codexMap;
+    private static Map<CodexEnum, ? extends CodexParser> codexMap;
 
     // 获取Coding接口的所有子类，反射获取子实现类，并封装到codexMap中
     static {
+        // todo 需要获取任意包路径下的子类
         Reflections reflections = new Reflections("com.ray");
-        Set<Class<? extends Coding>> subTypesOf = reflections.getSubTypesOf(Coding.class);
+        Set<Class<? extends CodexParser>> subTypesOf = reflections.getSubTypesOf(CodexParser.class);
         codexMap = subTypesOf.stream().map(clazz -> {
             try {
                 return clazz.newInstance();
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
-        }).collect(Collectors.toMap(Coding::getCodexType, a -> a));
+        }).collect(Collectors.toMap(CodexParser::getCodexType, a -> a));
     }
 
 
-    public static Coding getInstance(CodexEnum codexEnum) {
+    public static CodexParser<?> getInstance(CodexEnum codexEnum) {
         return codexMap.get(codexEnum);
     }
 
