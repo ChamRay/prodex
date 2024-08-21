@@ -1,6 +1,6 @@
-package priv.ray.codex.parse;
+package priv.ray.parse.parser;
 
-import priv.ray.codex.enums.CodexEnum;
+import priv.ray.parse.enums.CodexEnum;
 
 /**
  * @author Ray

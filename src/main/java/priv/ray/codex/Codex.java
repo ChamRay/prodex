@@ -1,6 +1,6 @@
 package priv.ray.codex;
 
-import priv.ray.codex.parse.CodexParser;
+import priv.ray.parse.parser.CodexParser;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

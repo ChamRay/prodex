@@ -1,8 +1,10 @@
 package priv.ray;
 
-import priv.ray.codex.enums.CodexEnum;
-import priv.ray.codex.factory.CodexFactory;
-import priv.ray.codex.parse.CodexParser;
+import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.Test;
+import priv.ray.parse.enums.CodexEnum;
+import priv.ray.factory.CodexFactory;
+import priv.ray.parse.parser.CodexParser;
 
 /**
  * @author Ray
@@ -10,15 +12,17 @@ import priv.ray.codex.parse.CodexParser;
  * @description: 启动测试类
  */
 
-
+@Slf4j
 public class BootTest {
 
-    public static void main(String[] args) {
+
+    @Test
+    public  void test() {
         Byte b = 2;
         CodexParser<Byte> parser = CodexFactory.getInstance(CodexEnum.BYTE);
+        log.info("{}",parser.hashCode());
         byte[] encode = parser.encode(b);
         Byte decode = parser.decode(encode);
-
 
     }
 }
