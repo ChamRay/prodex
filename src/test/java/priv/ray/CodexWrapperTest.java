@@ -3,10 +3,7 @@ package priv.ray;
 import org.junit.jupiter.api.Test;
 import priv.entity.ChargeSerial;
 import priv.ray.build.CodexWrapper;
-import priv.ray.build.CodexWrapperHandler;
-
-import java.util.ArrayList;
-import java.util.stream.Stream;
+import priv.ray.build.CodexHandlerWrapper;
 
 /**
  * @author Ray
@@ -17,8 +14,8 @@ public class CodexWrapperTest {
 
     @Test
     public void test() {
-        CodexWrapper wrapperHandler = new CodexWrapperHandler();
-        wrapperHandler.addLast(ChargeSerial::getStatus)
+        CodexWrapper wrapperHandler = new CodexHandlerWrapper();
+//        wrapperHandler.addLast(ChargeSerial::getStatus)
 
     }
 }

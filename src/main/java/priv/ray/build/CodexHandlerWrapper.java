@@ -12,7 +12,7 @@ import java.util.function.Function;
  * @description: 编解码包装器
  */
 @NoArgsConstructor
-public class CodexWrapperHandler implements CodexWrapper {
+public class CodexHandlerWrapper implements CodexWrapper {
     private Object object;
     private LinkedList<Function> fieldsList = new LinkedList<>();
     private CodexParser parser;
