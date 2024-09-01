@@ -16,7 +16,7 @@ public interface CodexParser<T> {
      * @param t
      * @return
      */
-    public byte[] encode(T t);
+    public byte[] encode(T t) ;
 
     /**
      * 将byte数组解码为字段数据

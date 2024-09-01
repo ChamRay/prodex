@@ -1,6 +1,7 @@
 package priv.ray.parse.parser;
 
 import priv.ray.parse.enums.CodexEnum;
+import priv.ray.util.ByteUtil;
 
 /**
  * @author Ray
@@ -15,11 +16,11 @@ public class BinByteParser implements CodexParser<Byte> {
 
     @Override
     public byte[] encode(Byte aByte) {
-        return new byte[0];
+        return new byte[]{aByte.byteValue()};
     }
 
     @Override
     public Byte decode(byte[] bytes) {
-        return 0;
+        return new Byte(bytes[0]);
     }
 }

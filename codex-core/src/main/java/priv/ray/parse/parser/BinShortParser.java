@@ -1,6 +1,7 @@
 package priv.ray.parse.parser;
 
 import priv.ray.parse.enums.CodexEnum;
+import priv.ray.util.ByteUtil;
 
 /**
  * @author Ray
@@ -20,11 +21,11 @@ public class BinShortParser implements CodexParser<Short> {
 
     @Override
     public byte[] encode(Short aShort) {
-        return new byte[size];
+        return ByteUtil.short2Byte(aShort);
     }
 
     @Override
     public Short decode(byte[] bytes) {
-        return 0;
+        return ByteUtil.byte2Short(bytes);
     }
 }

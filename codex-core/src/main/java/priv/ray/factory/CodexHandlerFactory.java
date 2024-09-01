@@ -16,7 +16,7 @@ import java.util.stream.Collectors;
  * @description: 用于创建编解码器的工厂
  */
 @Slf4j
-public class CodexFactory {
+public class CodexHandlerFactory {
 
 
     private static Map<CodexEnum, ? extends CodexParser> codexMap;

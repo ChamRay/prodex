@@ -1,6 +1,7 @@
 package priv.ray.parse.parser;
 
 import priv.ray.parse.enums.CodexEnum;
+import priv.ray.util.ByteUtil;
 
 /**
  * @author Ray
@@ -18,11 +19,11 @@ public class BinLonParser implements CodexParser<Long> {
 
     @Override
     public byte[] encode( Long aLong) {
-        return new byte[0];
+        return ByteUtil.long2Bytes(aLong);
     }
 
     @Override
     public Long decode(byte[] bytes) {
-        return 0L;
+        return ByteUtil.byte2Long(bytes);
     }
 }
