@@ -24,7 +24,7 @@ public class CodexHandlerFactory {
 
     // 获取Coding接口的所有子类，反射获取子实现类，并封装到codexMap中
     static {
-        Set<Class<? extends CodexParser>> subTypesOf = ReflectionUtils.getSubClassesWithPackages(CodexParser.class,"priv.ray.codex.parse");
+        Set<Class<? extends CodexParser>> subTypesOf = ReflectionUtils.getSubClassesWithPackages(CodexParser.class,CodexParser.class.getPackage().getName());
         codexMap = subTypesOf.stream().map(clazz -> {
             try {
                 return clazz.newInstance();

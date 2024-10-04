@@ -13,14 +13,14 @@ public interface CodexParser<T> {
     CodexEnum getCodexType();
     /**
      * 将字段数据编码为byte数组
-     * @param t
+     * @param t 任意类型对象
      * @return
      */
     public byte[] encode(T t) ;
 
     /**
      * 将byte数组解码为字段数据
-     * @param bytes
+     * @param bytes 字节数组
      * @return
      */
     public T decode(byte[] bytes);

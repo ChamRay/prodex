@@ -19,4 +19,9 @@ public class ChargeSerial{
 
     private String status;
     private String serial;
+
+
+    static {
+
+    }
 }
