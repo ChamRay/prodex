@@ -90,6 +90,7 @@ public class GenerateProcessor extends AbstractProcessor {
             Class<?> returnType = encodeMethod.getReturnType();
             Parameter[] parameters = encodeMethod.getParameters();
             ParameterArrayIterable parameterSpecs = new ParameterArrayIterable(parameters);
+            int modifiers = encodeMethod.getModifiers();
             return MethodSpec.methodBuilder("encode")
                     .addModifiers(Modifier.PUBLIC)
                     .returns(returnType)

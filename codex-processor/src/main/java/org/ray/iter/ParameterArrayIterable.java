@@ -29,8 +29,9 @@ public class ParameterArrayIterable implements Iterable<ParameterSpec> {
 
             @Override
             public ParameterSpec next() {
-                return new ParameterSpec(parameters[index++]);
+//                return new ParameterSpec(parameters[index++]);
+                return null;
             }
-        }
+        };
     }
 }
